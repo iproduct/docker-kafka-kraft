@@ -19,7 +19,7 @@ RUN wget https://mirrors.ocf.berkeley.edu/apache/kafka/${kafkaversion}/kafka_${s
 WORKDIR /opt/kafka
 
 COPY ./configs/server.properties ./config/kraft
-COPY ./*.sh ./
+COPY ./*.sh /opt/kafka/
 
 EXPOSE 9092 9093
 

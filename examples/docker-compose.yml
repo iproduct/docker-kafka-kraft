@@ -1,12 +1,20 @@
 version: "3.8"
 
 services:
-  kafka:
-    image: iproduct/course-apache-kafka/docker-kafka-kraft:latest
+  kafka-brocker-01:
+    image: iproduct/docker-kafka-kraft:latest
     restart: always
     ports:
       - "9093:9093"
     environment:
-      - KRAFT_CONTAINER_HOST_NAME=kafka
+      - KRAFT_CONTAINER_HOST_NAME=kafka01
       - KRAFT_CREATE_TOPICS=temperature,prices
       - KRAFT_PARTITIONS_PER_TOPIC=12
+
+  kafka-brocker-02:
+    image: iproduct/docker-kafka-kraft:latest
+    restart: always
+    ports:
+      - "9094:9094"
+    environment:
+      - KRAFT_CONTAINER_HOST_NAME=kafka02
