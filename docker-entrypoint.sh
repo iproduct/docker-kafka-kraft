@@ -20,12 +20,16 @@ echo "==> Applying environment variables..."
 #else
 echo "listeners=CONTROLLER://:19092,INTERNAL://:9092,EXTERNAL://:${BROKER_EXTERNAL_PORT}" >>$properties_file
 echo "advertised.listeners=INTERNAL://${KRAFT_CONTAINER_HOST_NAME}:9092,EXTERNAL://localhost:${BROKER_EXTERNAL_PORT}" >>$properties_file
-echo "inter.broker.listener.name=EXTERNAL" >>$properties_file
+echo "inter.broker.listener.name=INTERNAL" >>$properties_file
 echo "listener.security.protocol.map=CONTROLLER:PLAINTEXT,INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT" >>$properties_file
 #fi
 echo "broker.id=${BROKER_ID}" >>$properties_file
 echo "node.id=${BROKER_ID}" >>$properties_file
 echo "controller.quorum.voters=${CONTROLLER_QUORUM_VOTERS}" >>$properties_file
+echo "controller.listener.names=CONTROLLER" >>$properties_file
+echo "min.insync.replicas=${MIN_IN_SYNC_REPLICAS}" >>$properties_file
+#echo "auto.create.topics.enable=false" >>$properties_file
+
 
 echo "==> ✅ Enivronment variables applied."
 
