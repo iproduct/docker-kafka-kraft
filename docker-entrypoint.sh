@@ -8,6 +8,7 @@ _term() {
 trap _term SIGINT SIGTERM
 
 properties_file=/opt/kafka/config/kraft/server.properties
+#jmx_properties_file=/opt/kafka/config/kraft/jmx_local.coonfig
 kafka_addr="${KAFKA_CONTAINER_HOST_NAME}:9092"
 
 echo "==> Applying environment variables..."
@@ -30,7 +31,6 @@ echo "controller.listener.names=CONTROLLER" >>$properties_file
 echo "min.insync.replicas=${MIN_IN_SYNC_REPLICAS}" >>$properties_file
 #echo "auto.create.topics.enable=false" >>$properties_file
 
-
 echo "==> ✅ Enivronment variables applied."
 
 echo "==> Setting up Kafka storage..."
@@ -42,6 +42,8 @@ echo "==> ✅ Kafka storage setup."
 echo "==> Starting Kafka server..."
 ./bin/kafka-server-start.sh ./config/kraft/server.properties &
 child=$!
+unset KAFKA_OPTS
+unset JMX_PORT
 echo "==> ✅ Kafka server started."
 
 if [ -z $KAFKA_CREATE_TOPICS ]; then

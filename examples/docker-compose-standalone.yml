@@ -15,4 +15,5 @@ services:
       - KAFKA_CREATE_TOPICS=temperature,prices
       - KAFKA_PARTITIONS_PER_TOPIC=12
       - KAFKA_PARTITIONS_REPLICATION_FACTOR=1
+      - KAFKA_OPTS="-javaagent:./jmx_prometheus_javaagent-0.17.0.jar=8282:./config/kafka_broker.yml"
 

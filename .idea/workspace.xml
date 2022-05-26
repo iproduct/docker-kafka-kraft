@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6198410-ec1d-4556-8276-39af5209cfb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/prometheus-jmx-agent-config/kafka_broker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jmx_prometheus_javaagent-0.17.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker-entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-cluster.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +32,15 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="28ex9cPbYF3ApWkvNn42LwhVdwx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
@@ -52,8 +58,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CourseKafka\git\docker-kafka-kraft\examples" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CourseKafka\git\docker-kafka-kraft\configs" />
+      <recent name="D:\CourseKafka\git\docker-kafka-kraft\prometheus-jmx-agent-config" />
+    </key>
   </component>
-  <component name="RunManager" selected="Docker.examples/docker-compose-standalone.yml: Compose Deployment">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -81,12 +91,20 @@
         <settings>
           <option name="imageTag" value="iproduct/docker-kafka-kraft" />
           <option name="buildCliOptions" value="--label iproduct/docker-kafka-kraft" />
-          <option name="containerName" value="kafka-kraft-03-container" />
+          <option name="containerName" value="kafka-kraft-standalone-container" />
           <option name="portBindings">
             <list>
               <DockerPortBindingImpl>
                 <option name="containerPort" value="9093" />
                 <option name="hostPort" value="9093" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8282" />
+                <option name="hostPort" value="8282" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="12345" />
+                <option name="hostPort" value="12345" />
               </DockerPortBindingImpl>
             </list>
           </option>
@@ -132,13 +150,20 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Docker.examples.kafka-broker-01: Compose Deployment" />
+      <item itemvalue="Docker.examples/docker-compose-cluster.yml: Compose Deployment" />
+      <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
+      <item itemvalue="Docker.examples: Compose Deployment" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
-        <item itemvalue="Docker.examples/docker-compose-cluster.yml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.examples: Compose Deployment" />
+        <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
         <item itemvalue="Docker.examples.kafka-broker-01: Compose Deployment" />
+        <item itemvalue="Docker.examples/docker-compose-cluster.yml: Compose Deployment" />
+        <item itemvalue="Docker.examples: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -155,6 +180,20 @@
       <workItem from="1651762553996" duration="442000" />
       <workItem from="1651763049063" duration="13000" />
       <workItem from="1651763095711" duration="966000" />
+      <workItem from="1652093652989" duration="839000" />
+      <workItem from="1652157953093" duration="1434000" />
+      <workItem from="1652159849193" duration="94000" />
+      <workItem from="1652160207900" duration="12000" />
+      <workItem from="1652160235926" duration="488000" />
+      <workItem from="1652160785325" duration="1530000" />
+      <workItem from="1652169354130" duration="846000" />
+      <workItem from="1652183009561" duration="202000" />
+      <workItem from="1652351494870" duration="1178000" />
+      <workItem from="1652697635692" duration="589000" />
+      <workItem from="1653023019531" duration="5376000" />
+      <workItem from="1653052967439" duration="490000" />
+      <workItem from="1653053571081" duration="1214000" />
+      <workItem from="1653055628806" duration="21826000" />
     </task>
     <task id="LOCAL-00001" summary="docker image updated">
       <created>1651608417241</created>
@@ -177,13 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651750716781</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="kraft standalone deployment using docker compose">
+      <created>1652093948274</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652093948274</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="docker image updated" />
     <MESSAGE value="kraft cluster deployment using docker compose" />
     <MESSAGE value="kraft standalone deployment using docker compose" />

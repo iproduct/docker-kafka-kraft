@@ -5,15 +5,17 @@ WORKDIR /opt
 ARG kafkaversion=3.1.0
 ARG scalaversion=2.13
 
-ENV KAFKA_CONTAINER_HOST_NAME=
+ENV KAFKA_CONTAINER_HOST_NAME=kafka-broker-03
 ENV BOOTSTRAP_SERVERS=localhost:9093
 ENV BROKER_ID=1
 ENV BROKER_EXTERNAL_PORT=9093
 ENV CONTROLLER_QUORUM_VOTERS=1@localhost:19092
-ENV KAFKA_CREATE_TOPICS=
-ENV KAFKA_PARTITIONS_PER_TOPIC=1
+ENV KAFKA_CREATE_TOPICS=temperature
+ENV KAFKA_PARTITIONS_PER_TOPIC=12
 ENV KAFKA_PARTITIONS_REPLICATION_FACTOR=1
 ENV MIN_IN_SYNC_REPLICAS=1
+ENV KAFKA_OPTS=-javaagent:./jmx_prometheus_javaagent-0.17.0.jar=8282:./config/kafka_broker.yml
+ENV JMX_PORT=12345
 #ENV BROKER_IP=172.28.0.2
 
 
@@ -27,9 +29,12 @@ RUN wget https://mirrors.ocf.berkeley.edu/apache/kafka/${kafkaversion}/kafka_${s
 
 WORKDIR /opt/kafka
 
-COPY ./configs/server.properties ./config/kraft
+COPY ./jmx_prometheus_javaagent-0.17.0.jar .
+COPY ./configs/prometheus-jmx-agent-config/kafka_broker.yml ./config
+
+COPY ./configs/server.properties ./config
 COPY ./*.sh /opt/kafka/
 
-EXPOSE 9092 9093
+EXPOSE 9092 9093 8282 12345
 
 ENTRYPOINT [ "./docker-entrypoint.sh" ]
