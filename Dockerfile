@@ -35,6 +35,6 @@ COPY ./configs/prometheus-jmx-agent-config/kafka_broker.yml ./config
 COPY ./configs/server.properties ./config
 COPY ./*.sh /opt/kafka/
 
-EXPOSE 9092 9093 8282 12345
+EXPOSE 9092 9093 8282
 
-ENTRYPOINT [ "./docker-entrypoint.sh" ]
+ENTRYPOINT ["bash", "./docker-entrypoint.sh" ]

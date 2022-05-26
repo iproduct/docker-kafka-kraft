@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6198410-ec1d-4556-8276-39af5209cfb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/configs/prometheus-jmx-agent-config/kafka_broker.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jmx_prometheus_javaagent-0.17.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker-entrypoint.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +59,7 @@
       <recent name="D:\CourseKafka\git\docker-kafka-kraft\prometheus-jmx-agent-config" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Docker.examples/docker-compose-standalone.yml: Compose Deployment">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -101,10 +97,6 @@
               <DockerPortBindingImpl>
                 <option name="containerPort" value="8282" />
                 <option name="hostPort" value="8282" />
-              </DockerPortBindingImpl>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="12345" />
-                <option name="hostPort" value="12345" />
               </DockerPortBindingImpl>
             </list>
           </option>
@@ -159,8 +151,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.examples.kafka-broker-01: Compose Deployment" />
         <item itemvalue="Docker.examples/docker-compose-cluster.yml: Compose Deployment" />
         <item itemvalue="Docker.examples: Compose Deployment" />
@@ -193,7 +185,7 @@
       <workItem from="1653023019531" duration="5376000" />
       <workItem from="1653052967439" duration="490000" />
       <workItem from="1653053571081" duration="1214000" />
-      <workItem from="1653055628806" duration="21826000" />
+      <workItem from="1653055628806" duration="24093000" />
     </task>
     <task id="LOCAL-00001" summary="docker image updated">
       <created>1651608417241</created>
@@ -223,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652093948274</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="kraft standalone deployment using docker compose &amp; Prometheus exporter">
+      <created>1653562499613</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653562499613</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +233,8 @@
     <MESSAGE value="docker image updated" />
     <MESSAGE value="kraft cluster deployment using docker compose" />
     <MESSAGE value="kraft standalone deployment using docker compose" />
-    <option name="LAST_COMMIT_MESSAGE" value="kraft standalone deployment using docker compose" />
+    <MESSAGE value="kraft standalone deployment using docker compose &amp; Prometheus exporter" />
+    <option name="LAST_COMMIT_MESSAGE" value="kraft standalone deployment using docker compose &amp; Prometheus exporter" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
