@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6198410-ec1d-4556-8276-39af5209cfb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prometheus/prometheus.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prometheus/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/prometheus/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,7 @@
       <workItem from="1653023019531" duration="5376000" />
       <workItem from="1653052967439" duration="490000" />
       <workItem from="1653053571081" duration="1214000" />
-      <workItem from="1653055628806" duration="25451000" />
+      <workItem from="1653055628806" duration="26792000" />
     </task>
     <task id="LOCAL-00001" summary="docker image updated">
       <created>1651608417241</created>
@@ -237,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653564792007</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="docker compose  Kafka + Prometheus exporter">
+      <created>1653566162506</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653566162506</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +256,8 @@
     <MESSAGE value="kraft cluster deployment using docker compose" />
     <MESSAGE value="kraft standalone deployment using docker compose" />
     <MESSAGE value="kraft standalone deployment using docker compose &amp; Prometheus exporter" />
-    <option name="LAST_COMMIT_MESSAGE" value="kraft standalone deployment using docker compose &amp; Prometheus exporter" />
+    <MESSAGE value="docker compose  Kafka + Prometheus exporter" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker compose  Kafka + Prometheus exporter" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
