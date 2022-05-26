@@ -38,9 +38,20 @@ services:
     depends_on:
     - kafka-broker-01
 
+  alertmanager:
+    image: prom/alertmanager
+    restart: always
+    ports:
+      - 19093:9093
+    volumes:
+      - ../alertmanager/:/etc/alertmanager/
+    command:
+      - '--config.file=/etc/alertmanager/config.yml'
+      - '--storage.path=/alertmanager'
+
   grafana:
     image: grafana/grafana
-    user: 'admin'
+    user: '472'
     restart: always
     environment:
       GF_INSTALL_PLUGINS: 'grafana-clock-panel,grafana-simple-json-datasource'
