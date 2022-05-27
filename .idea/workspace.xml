@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b6198410-ec1d-4556-8276-39af5209cfb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grafana/provisioning/dashboards/dashboard.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grafana/provisioning/datasources/datasource.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <recent name="D:\CourseKafka\git\docker-kafka-kraft\prometheus-jmx-agent-config" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Docker.examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -90,7 +90,7 @@
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="imageTag" value="iproduct/docker-kafka-kraft" />
+          <option name="imageTag" value="tiliev/docker-kafka-kraft" />
           <option name="containerName" value="standalone-docker-kafka-kraft-container" />
           <option name="portBindings">
             <list>
@@ -109,14 +109,9 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="examples/docker-compose-kafka-prometheus-grafana.yml.alertmanager: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="services">
-            <list>
-              <option value="alertmanager" />
-            </list>
-          </option>
           <option name="sourceFilePath" value="examples/docker-compose-kafka-prometheus-grafana.yml" />
         </settings>
       </deployment>
@@ -157,19 +152,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Docker.examples/docker-compose-standalone.yml.kafka-broker-01: Compose Deployment" />
-      <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.alertmanager: Compose Deployment" />
       <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.grafana: Compose Deployment" />
       <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
         <item itemvalue="Docker.examples/docker-compose-standalone.yml.kafka-broker-01: Compose Deployment" />
         <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.grafana: Compose Deployment" />
-        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.alertmanager: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +195,7 @@
       <workItem from="1653052967439" duration="490000" />
       <workItem from="1653053571081" duration="1214000" />
       <workItem from="1653055628806" duration="30186000" />
-      <workItem from="1653649551572" duration="4803000" />
+      <workItem from="1653649551572" duration="8355000" />
     </task>
     <task id="LOCAL-00001" summary="docker image updated">
       <created>1651608417241</created>
@@ -272,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653568595302</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="kafka-overview.json dashboard config added">
+      <created>1653655007550</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1653655007550</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

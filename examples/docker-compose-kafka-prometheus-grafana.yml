@@ -6,7 +6,7 @@ volumes:
 
 services:
   kafka-broker-01:
-    image: iproduct/docker-kafka-kraft:latest
+    image: tiliev/docker-kafka-kraft:latest
     restart: always
     ports:
       - "9093:9093"
