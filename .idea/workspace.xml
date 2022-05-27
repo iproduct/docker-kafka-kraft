@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6198410-ec1d-4556-8276-39af5209cfb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/grafana/kafka-overview.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +35,22 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/CourseKafka/git/docker-kafka-kraft",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CourseKafka/git/docker-kafka-kraft&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CourseKafka\git\docker-kafka-kraft" />
@@ -61,7 +64,7 @@
       <recent name="D:\CourseKafka\git\docker-kafka-kraft\prometheus-jmx-agent-config" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.alertmanager: Compose Deployment">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -84,10 +87,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
         <settings>
-          <option name="sourceFilePath" value="examples/docker-compose-kafka-prometheus-grafana.yml" />
+          <option name="imageTag" value="iproduct/docker-kafka-kraft" />
+          <option name="containerName" value="standalone-docker-kafka-kraft-container" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="9093" />
+                <option name="hostPort" value="9093" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8282" />
+                <option name="hostPort" value="8282" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
@@ -118,19 +135,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="examples/docker-compose-kafka-prometheus-grafana.yml.prometheus: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="prometheus" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="examples/docker-compose-kafka-prometheus-grafana.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="examples/docker-compose-standalone.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -139,20 +143,33 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="examples/docker-compose-standalone.yml.kafka-broker-01: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-broker-01" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="examples/docker-compose-standalone.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Docker.examples/docker-compose-standalone.yml.kafka-broker-01: Compose Deployment" />
       <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.alertmanager: Compose Deployment" />
       <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.grafana: Compose Deployment" />
-      <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.prometheus: Compose Deployment" />
-      <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment" />
       <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.alertmanager: Compose Deployment" />
-        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.grafana: Compose Deployment" />
-        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment" />
-        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.prometheus: Compose Deployment" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
+        <item itemvalue="Docker.examples/docker-compose-standalone.yml.kafka-broker-01: Compose Deployment" />
+        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.grafana: Compose Deployment" />
+        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.alertmanager: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +199,8 @@
       <workItem from="1653023019531" duration="5376000" />
       <workItem from="1653052967439" duration="490000" />
       <workItem from="1653053571081" duration="1214000" />
-      <workItem from="1653055628806" duration="27896000" />
+      <workItem from="1653055628806" duration="30186000" />
+      <workItem from="1653649551572" duration="4803000" />
     </task>
     <task id="LOCAL-00001" summary="docker image updated">
       <created>1651608417241</created>
@@ -247,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653568116770</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="kafka-overview.json dashboard config added">
+      <created>1653568595302</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653568595302</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +287,8 @@
     <MESSAGE value="docker compose  Kafka + Prometheus exporter" />
     <MESSAGE value="docker compose  Kafka + Prometheus exporter + Grafana" />
     <MESSAGE value="docker compose  Kafka + Prometheus exporter + Grafana running" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker compose  Kafka + Prometheus exporter + Grafana running" />
+    <MESSAGE value="kafka-overview.json dashboard config added" />
+    <option name="LAST_COMMIT_MESSAGE" value="kafka-overview.json dashboard config added" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

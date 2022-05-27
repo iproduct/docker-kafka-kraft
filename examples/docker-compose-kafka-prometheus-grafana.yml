@@ -54,7 +54,7 @@ services:
     user: '472'
     restart: always
     environment:
-      GF_INSTALL_PLUGINS: 'grafana-clock-panel,grafana-simple-json-datasource'
+      GF_INSTALL_PLUGINS: 'grafana-piechart-panel,grafana-clock-panel,grafana-simple-json-datasource'
     volumes:
       - grafana_data:/var/lib/grafana
       - ../grafana/provisioning/:/etc/grafana/provisioning/
