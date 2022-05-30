@@ -43,7 +43,7 @@ echo "==> Starting Kafka server..."
 ./bin/kafka-server-start.sh ./config/kraft/server.properties &
 child=$!
 unset KAFKA_OPTS
-unset JMX_PORT
+
 echo "==> ✅ Kafka server started."
 
 if [ -z $KAFKA_CREATE_TOPICS ]; then

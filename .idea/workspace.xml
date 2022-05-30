@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b6198410-ec1d-4556-8276-39af5209cfb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-kafka-prometheus-grafana.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grafana/provisioning/dashboards/dashboard.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grafana/provisioning/datasources/datasource.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker-entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <recent name="D:\CourseKafka\git\docker-kafka-kraft\prometheus-jmx-agent-config" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -195,7 +194,8 @@
       <workItem from="1653052967439" duration="490000" />
       <workItem from="1653053571081" duration="1214000" />
       <workItem from="1653055628806" duration="30186000" />
-      <workItem from="1653649551572" duration="8355000" />
+      <workItem from="1653649551572" duration="9757000" />
+      <workItem from="1653905702192" duration="2031000" />
     </task>
     <task id="LOCAL-00001" summary="docker image updated">
       <created>1651608417241</created>
@@ -274,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653655007550</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="kafka Dockerfile image tag changed to tiliev/docker-kafka-kraft">
+      <created>1653658490997</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653658490997</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +297,8 @@
     <MESSAGE value="docker compose  Kafka + Prometheus exporter + Grafana" />
     <MESSAGE value="docker compose  Kafka + Prometheus exporter + Grafana running" />
     <MESSAGE value="kafka-overview.json dashboard config added" />
-    <option name="LAST_COMMIT_MESSAGE" value="kafka-overview.json dashboard config added" />
+    <MESSAGE value="kafka Dockerfile image tag changed to tiliev/docker-kafka-kraft" />
+    <option name="LAST_COMMIT_MESSAGE" value="kafka Dockerfile image tag changed to tiliev/docker-kafka-kraft" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   kafka-broker-01:
-    image: iproduct/docker-kafka-kraft:latest
+    image: tiliev/docker-kafka-kraft:latest
 
     restart: always
     ports:
