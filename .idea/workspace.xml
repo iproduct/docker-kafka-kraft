@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6198410-ec1d-4556-8276-39af5209cfb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/security/client.truststore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/kafka_server_jaas.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/server.keystore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/server.truststore.jks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configs/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker-entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +206,7 @@
       <workItem from="1654608770240" duration="2488000" />
       <workItem from="1655459574724" duration="2577000" />
       <workItem from="1656091680333" duration="521000" />
-      <workItem from="1656346419820" duration="23779000" />
+      <workItem from="1656346419820" duration="26540000" />
     </task>
     <task id="LOCAL-00001" summary="docker image updated">
       <created>1651608417241</created>
@@ -305,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653909320263</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="SSL + SASL + JAAS PLAIN authentication confidured for docker-compose-standalone.yml">
+      <created>1656417514898</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1656417514898</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +323,8 @@
     <MESSAGE value="docker compose  Kafka + Prometheus exporter + Grafana running" />
     <MESSAGE value="kafka-overview.json dashboard config added" />
     <MESSAGE value="kafka Dockerfile image tag changed to tiliev/docker-kafka-kraft" />
-    <option name="LAST_COMMIT_MESSAGE" value="kafka Dockerfile image tag changed to tiliev/docker-kafka-kraft" />
+    <MESSAGE value="SSL + SASL + JAAS PLAIN authentication confidured for docker-compose-standalone.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="SSL + SASL + JAAS PLAIN authentication confidured for docker-compose-standalone.yml" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

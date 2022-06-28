@@ -38,6 +38,6 @@ COPY ./configs/server.properties ./config/kraft
 COPY ./*.sh /opt/kafka/
 COPY ./security/* ./
 
-EXPOSE 9092 9093 8092 8093 8282
+EXPOSE 9092 9093 8282 8093 8092
 
 ENTRYPOINT ["bash", "./docker-entrypoint.sh" ]
