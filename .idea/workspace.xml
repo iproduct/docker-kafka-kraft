@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6198410-ec1d-4556-8276-39af5209cfb6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/security/client.truststore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security/kafka_server_jaas.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security/server.keystore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security/server.truststore.jks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configs/server.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker-entrypoint.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/docker-compose-standalone.yml" afterDir="false" />
     </list>
@@ -34,24 +40,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CourseKafka/git/docker-kafka-kraft&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/CourseKafka/git/docker-kafka-kraft/security",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CourseKafka\git\docker-kafka-kraft\security" />
       <recent name="D:\CourseKafka\git\docker-kafka-kraft" />
       <recent name="D:\CourseKafka\git\docker-kafka-kraft\examples" />
       <recent name="D:\CourseKafka\git\docker-kafka-kraft\configs" />
@@ -100,6 +107,10 @@
               <DockerPortBindingImpl>
                 <option name="containerPort" value="8282" />
                 <option name="hostPort" value="8282" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8093" />
+                <option name="hostPort" value="8093" />
               </DockerPortBindingImpl>
             </list>
           </option>
@@ -159,9 +170,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.examples/docker-compose-standalone.yml: Compose Deployment" />
+        <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml: Compose Deployment" />
         <item itemvalue="Docker.examples/docker-compose-standalone.yml.kafka-broker-01: Compose Deployment" />
         <item itemvalue="Docker.examples/docker-compose-kafka-prometheus-grafana.yml.grafana: Compose Deployment" />
       </list>
@@ -195,7 +206,13 @@
       <workItem from="1653053571081" duration="1214000" />
       <workItem from="1653055628806" duration="30186000" />
       <workItem from="1653649551572" duration="9757000" />
-      <workItem from="1653905702192" duration="2031000" />
+      <workItem from="1653905702192" duration="3833000" />
+      <workItem from="1654507267388" duration="606000" />
+      <workItem from="1654525229392" duration="102000" />
+      <workItem from="1654608770240" duration="2488000" />
+      <workItem from="1655459574724" duration="2577000" />
+      <workItem from="1656091680333" duration="521000" />
+      <workItem from="1656346419820" duration="23779000" />
     </task>
     <task id="LOCAL-00001" summary="docker image updated">
       <created>1651608417241</created>
@@ -281,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653658490997</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="kafka Dockerfile image tag changed to tiliev/docker-kafka-kraft">
+      <created>1653909320262</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1653909320263</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

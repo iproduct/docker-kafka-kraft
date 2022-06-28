@@ -8,8 +8,9 @@ _term() {
 trap _term SIGINT SIGTERM
 
 properties_file=/opt/kafka/config/kraft/server.properties
-#jmx_properties_file=/opt/kafka/config/kraft/jmx_local.coonfig
+#jmx_properties_file=/opt/kafka/config/kraft/jmx_local.config
 kafka_addr="${KAFKA_CONTAINER_HOST_NAME}:9092"
+kafka_addr_ssl="${KAFKA_CONTAINER_HOST_NAME}:8092"
 
 echo "==> Applying environment variables..."
 
@@ -19,10 +20,10 @@ echo "==> Applying environment variables..."
 #    echo "inter.broker.listener.name=EXTERNAL" >> $properties_file;
 #    echo "listener.security.protocol.map=CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT" >> $properties_file;
 #else
-echo "listeners=CONTROLLER://:19092,INTERNAL://:9092,EXTERNAL://:${BROKER_EXTERNAL_PORT}" >>$properties_file
-echo "advertised.listeners=INTERNAL://${KRAFT_CONTAINER_HOST_NAME}:9092,EXTERNAL://localhost:${BROKER_EXTERNAL_PORT}" >>$properties_file
-echo "inter.broker.listener.name=INTERNAL" >>$properties_file
-echo "listener.security.protocol.map=CONTROLLER:PLAINTEXT,INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT" >>$properties_file
+echo "listeners=CONTROLLER://:19092,INTERNAL://:9092,EXTERNAL://:${BROKER_EXTERNAL_PORT},SASL_SSL_INTERNAL://:8092,SASL_SSL://:${BROKER_EXTERNAL_PORT_SSL}" >>$properties_file
+echo "advertised.listeners=INTERNAL://${KRAFT_CONTAINER_HOST_NAME}:9092,EXTERNAL://localhost:${BROKER_EXTERNAL_PORT},SASL_SSL_INTERNAL://${KRAFT_CONTAINER_HOST_NAME}:8092,SASL_SSL://localhost:${BROKER_EXTERNAL_PORT_SSL}" >>$properties_file
+#echo "inter.broker.listener.name=INTERNAL" >>$properties_file
+echo "listener.security.protocol.map=CONTROLLER:PLAINTEXT,INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,SASL_SSL_INTERNAL:SASL_SSL,SASL_SSL:SASL_SSL" >>$properties_file
 #fi
 echo "broker.id=${BROKER_ID}" >>$properties_file
 echo "node.id=${BROKER_ID}" >>$properties_file
